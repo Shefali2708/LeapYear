@@ -4,12 +4,12 @@ namespace EmployeeWageProgram
 {
     class Program
     {
+        //UC3 Add part time emp and wage
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-
             //Constants
             int FULL_TIME = 1;
+            int PART_TIME = 2;
             int EMP_RATE_PER_HOUR = 20;
 
             //Variables
@@ -23,9 +23,13 @@ namespace EmployeeWageProgram
             {
                 empHrs = 8;
             }
-            else
+            else if (empCheck == PART_TIME)
             {
                 empHrs = 4;
+            }
+            else
+            {
+                empHrs = 0;
             }
             empWage = empHrs * EMP_RATE_PER_HOUR;
             Console.WriteLine("Emp Wage : " + empWage);
